@@ -21,14 +21,10 @@
   },
   "homepage": "https://github.com/nick-ng/nick-gbh-contentful-proxy#readme",
   "dependencies": {
-    "bluebird": ">=3.5.0",
     "body-parser": ">=1.17.2",
     "contentful": ">=4.4.3",
     "dotenv-safe": ">=4.0.4",
-    "express": ">=4.15.3",
-    "redis": ">=2.7.1",
-    "uuid": ">=3.0.1",
-    "uws": ">=0.14.5"
+    "express": ">=4.15.3"
   },
   "devDependencies": {
     "eslint": ">=3.15.0",

@@ -4,10 +4,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const {
-  getVeteranRage,
-  getPlayerList,
-  getPlayerListRaw,
-} = require('./services/contentful-service')(process.env.CONTENTFUL_GBH_SPACE)(process.env.CONTENTFUL_ACCESS_TOKEN);
+  getFruitList,
+} = require('./services/contentful-service')(process.env.CONTENTFUL_FRUIT_SPACE)(process.env.CONTENTFUL_ACCESS_TOKEN);
 
 const PORT = process.env.PORT || 4001;
 const INDEX = path.join(__dirname, 'public', 'index.html');
@@ -25,9 +23,7 @@ server.use((req, res, next) => {
 });
 
 // Routes
-server.get('/veteran-rage', getVeteranRage);
-server.get('/player-list', getPlayerList);
-server.get('/player-list-raw', getPlayerListRaw);
+server.get('/fruit-list', getFruitList);
 
 server.use((req, res) => res.sendFile(INDEX));
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));
